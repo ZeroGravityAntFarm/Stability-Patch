@@ -1,0 +1,515 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\ED">
+      <UniqueIdentifier>{0fda3a89-af22-41f5-8890-a3a13e8cd055}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Blam">
+      <UniqueIdentifier>{a8bd5c14-c8bb-48a4-b76a-e00583e71c32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utils">
+      <UniqueIdentifier>{6179b934-ff2f-41ac-a35a-78f1de450a61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Defs">
+      <UniqueIdentifier>{4c4c1143-10aa-4c88-86ca-ca952a021710}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Hooking.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Pointer.cpp">
+      <Filter>Source Files\ED</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\BitStream.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\BlamData.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\BlamGraphics.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\BlamInput.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\BlamNetwork.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\BlamObjects.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\BlamPlayers.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Cache\StringIdCache.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Math\Angle.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Math\Bounds.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Math\ColorARGB.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Math\ColorRGB.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Math\Point2D.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Math\RealColorARGB.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Math\RealColorRGB.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Math\RealEulerAngles2D.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Math\RealEulerAngles3D.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Math\RealMatrix3x3.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Math\RealMatrix4x3.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Math\RealOrientation3D.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Math\RealPlane2D.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Math\RealPlane3D.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Math\RealPoint2D.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Math\RealPoint3D.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Math\RealQuaternion.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Math\RealRectangle2D.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Math\RealRectangle3D.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Math\RealVector2D.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Math\RealVector3D.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Math\Rectangle2D.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Tags\Camera\AreaScreenEffect.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Tags\Globals\CacheFileGlobalTags.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Tags\Items\DefinitionEquipment.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Tags\Items\DefinitionWeapon.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Tags\Items\Item.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Tags\Objects\Biped.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Tags\Objects\Object.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Tags\Objects\Projectile.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Tags\Objects\Unit.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Tags\Objects\Vehicle.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Tags\Tag.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Tags\TagBlock.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Tags\TagData.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Tags\TagGroup.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Tags\TagInstance.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Tags\TagReference.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Blam\Text\StringID.cpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClCompile>
+    <ClCompile Include="Definitions\EnumDefinition.cpp">
+      <Filter>Source Files\Defs</Filter>
+    </ClCompile>
+    <ClCompile Include="Definitions\FieldDefinition.cpp">
+      <Filter>Source Files\Defs</Filter>
+    </ClCompile>
+    <ClCompile Include="Definitions\StructDefinition.cpp">
+      <Filter>Source Files\Defs</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\Assert.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\Cryptography.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\String.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\VersionInfo.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Simulation.cpp">
+      <Filter>Source Files\ED</Filter>
+    </ClCompile>
+    <ClCompile Include="DatumHandle.cpp">
+      <Filter>Source Files\ED</Filter>
+    </ClCompile>
+    <ClCompile Include="ElDorito.cpp">
+      <Filter>Source Files\ED</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Precomp.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Hooking.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Pointer.hpp">
+      <Filter>Source Files\ED</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\BitStream.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\BlamData.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\BlamEvents.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\BlamGraphics.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\BlamInput.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\BlamMemory.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\BlamNetwork.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\BlamObjects.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\BlamPlayers.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\BlamTime.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\BlamTypes.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Cache\StringIdCache.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Math\Angle.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Math\Bounds.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Math\ColorARGB.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Math\ColorRGB.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Math\MathUtil.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Math\Point2D.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Math\RealColorARGB.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Math\RealColorRGB.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Math\RealEulerAngles2D.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Math\RealEulerAngles3D.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Math\RealMatrix3x3.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Math\RealMatrix4x3.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Math\RealOrientation3D.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Math\RealPlane2D.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Math\RealPlane3D.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Math\RealPoint2D.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Math\RealPoint3D.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Math\RealQuaternion.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Math\RealRectangle2D.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Math\RealRectangle3D.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Math\RealVector2D.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Math\RealVector3D.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Math\Rectangle2D.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Padding.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\Camera\AreaScreenEffect.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\Camera\CameraFxSettings.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\Enum.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\Game\AssaultVariant.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\Game\CTFVariant.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\Game\GameEngineSettings.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\Game\GameVariant.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\Game\Globals.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\Game\InfectionVariant.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\Game\JuggernautVariant.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\Game\KOTHVariant.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\Game\MultiplayerGlobals.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\Game\OddballVariant.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\Game\SandboxVariant.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\Game\SlayerVariant.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\Game\TerritoriesVariant.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\Game\TraitsProfile.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\Game\VIPVariant.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\Globals\CacheFileGlobalTags.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\Globals\ForgeGlobalsDefinition.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\Items\DefinitionEquipment.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\Items\DefinitionWeapon.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\Items\Item.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\Models\Model.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\Objects\Biped.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\Objects\Damage.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\Objects\Medal.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\Objects\Object.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\Objects\Projectile.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\Objects\Unit.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\Objects\Vehicle.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\Scenario\Scenario.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\Sounds\Noise.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\Sounds\SoundClasses.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\Tag.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\TagBlock.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\TagData.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\TagGroup.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\TagInstance.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\TagReference.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\Tags.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\UI\ChudDefinition.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\UI\ChudGlobalsDefinition.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\UI\GfxTexturesList.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\UI\GuiSkinWidgetDefinition.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Tags\UI\MultilingualUnicodeStringList.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Blam\Text\StringID.hpp">
+      <Filter>Source Files\Blam</Filter>
+    </ClInclude>
+    <ClInclude Include="Definitions\EnumDefinition.hpp">
+      <Filter>Source Files\Defs</Filter>
+    </ClInclude>
+    <ClInclude Include="Definitions\FieldDefinition.hpp">
+      <Filter>Source Files\Defs</Filter>
+    </ClInclude>
+    <ClInclude Include="Definitions\StructDefinition.hpp">
+      <Filter>Source Files\Defs</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Assert.hpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Bits.hpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Cryptography.hpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Macros.hpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\NameValueTable.hpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Singleton.hpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\String.hpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\UPnP.hpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Utils.hpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\VersionInfo.hpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\WebSocket.hpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Simulation.hpp">
+      <Filter>Source Files\ED</Filter>
+    </ClInclude>
+    <ClInclude Include="DatumHandle.hpp">
+      <Filter>Source Files\ED</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

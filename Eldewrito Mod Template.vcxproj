@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{656BA4AE-25ED-47EF-A223-39D07A12C427}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>EldewritoModTemplate</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Configuration)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Configuration)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;ELDEWRITOMODTEMPLATE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeaderFile>precomp.hpp</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)libs\detours\include;$(SolutionDir)libs\boost-1.60\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <AdditionalOptions>/std:c++latest %(AdditionalOptions)</AdditionalOptions>
+      <ShowIncludes>false</ShowIncludes>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalLibraryDirectories>$(SolutionDir)libs/detours/lib.X86;$(SolutionDir)libs/detours/lib.X86/$(Configuration);$(SolutionDir)libs/boost-1.60/lib;$(SolutionDir)libs/boost-1.60/lib/$(Configuration);$(SolutionDir)libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;Version.lib;ws2_32.lib;detours.lib;psapi.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;ELDEWRITOMODTEMPLATE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <SDLCheck>
+      </SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;ELDEWRITOMODTEMPLATE_EXPORTS;_WINDOWS;_USRDLL;_ENABLE_ATOMIC_ALIGNMENT_FIX;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS;_SILENCE_FPOS_SEEKPOS_DEPRECATION_WARNING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeaderFile>Precomp.hpp</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <AdditionalIncludeDirectories>$(SolutionDir)libs\directx\Include;$(SolutionDir)libs\detours\include;$(SolutionDir)libs\openssl-1.1.0e\include;$(SolutionDir)libs\websocketpp\include;$(SolutionDir)libs\cef;$(SolutionDir)libs\cef\include;$(SolutionDir)libs\cppnetlib\include;$(SolutionDir)libs\boost-1.60\include;$(SolutionDir)libs\miniupnpc\include;$(SolutionDir)libs\discord-rpc\include;$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/std:c++latest %(AdditionalOptions)</AdditionalOptions>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>
+      </EnableCOMDATFolding>
+      <OptimizeReferences>
+      </OptimizeReferences>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableUAC>true</EnableUAC>
+      <AdditionalLibraryDirectories>$(SolutionDir)libs/directx/lib.X86;$(SolutionDir)libs/directx/lib.X86/$(Configuration);$(SolutionDir)libs/detours/lib.X86;$(SolutionDir)libs/detours/lib.X86/$(Configuration);$(SolutionDir)libs/openssl-1.1.0e/lib;$(SolutionDir)libs/openssl-1.1.0e/lib/$(Configuration);$(SolutionDir)libs/cef/lib;$(SolutionDir)libs/cef/lib/$(Configuration);$(SolutionDir)libs/cppnetlib/lib;$(SolutionDir)libs/cppnetlib/lib/$(Configuration);$(SolutionDir)libs/boost-1.60/lib;$(SolutionDir)libs/boost-1.60/lib/$(Configuration);$(SolutionDir)libs/miniupnpc/lib;$(SolutionDir)libs/miniupnpc/lib/$(Configuration);$(SolutionDir)libs/discord-rpc/lib;$(SolutionDir)libs/discord-rpc/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;d3d9.lib;d3dx9.lib;Version.lib;ws2_32.lib;detours.lib;libeay32MT.lib;psapi.lib;winmm.lib;libcef.lib;libcef_dll_wrapper.lib;cppnetlib-uri.lib;iphlpapi.lib;miniupnpc.lib;Xinput9_1_0.lib</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers>true</ImageHasSafeExceptionHandlers>
+      <AdditionalOptions>%(AdditionalOptions)  /machine:X86 /NODEFAULTLIB:libcmtd.lib /ignore:4099</AdditionalOptions>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;ELDEWRITOMODTEMPLATE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Blam\BitStream.cpp" />
+    <ClCompile Include="Blam\BlamData.cpp" />
+    <ClCompile Include="Blam\BlamGraphics.cpp" />
+    <ClCompile Include="Blam\BlamInput.cpp" />
+    <ClCompile Include="Blam\BlamNetwork.cpp" />
+    <ClCompile Include="Blam\BlamObjects.cpp" />
+    <ClCompile Include="Blam\BlamPlayers.cpp" />
+    <ClCompile Include="Blam\Cache\StringIdCache.cpp" />
+    <ClCompile Include="Blam\Math\Angle.cpp" />
+    <ClCompile Include="Blam\Math\Bounds.cpp" />
+    <ClCompile Include="Blam\Math\ColorARGB.cpp" />
+    <ClCompile Include="Blam\Math\ColorRGB.cpp" />
+    <ClCompile Include="Blam\Math\Point2D.cpp" />
+    <ClCompile Include="Blam\Math\RealColorARGB.cpp" />
+    <ClCompile Include="Blam\Math\RealColorRGB.cpp" />
+    <ClCompile Include="Blam\Math\RealEulerAngles2D.cpp" />
+    <ClCompile Include="Blam\Math\RealEulerAngles3D.cpp" />
+    <ClCompile Include="Blam\Math\RealMatrix3x3.cpp" />
+    <ClCompile Include="Blam\Math\RealMatrix4x3.cpp" />
+    <ClCompile Include="Blam\Math\RealOrientation3D.cpp" />
+    <ClCompile Include="Blam\Math\RealPlane2D.cpp" />
+    <ClCompile Include="Blam\Math\RealPlane3D.cpp" />
+    <ClCompile Include="Blam\Math\RealPoint2D.cpp" />
+    <ClCompile Include="Blam\Math\RealPoint3D.cpp" />
+    <ClCompile Include="Blam\Math\RealQuaternion.cpp" />
+    <ClCompile Include="Blam\Math\RealRectangle2D.cpp" />
+    <ClCompile Include="Blam\Math\RealRectangle3D.cpp" />
+    <ClCompile Include="Blam\Math\RealVector2D.cpp" />
+    <ClCompile Include="Blam\Math\RealVector3D.cpp" />
+    <ClCompile Include="Blam\Math\Rectangle2D.cpp" />
+    <ClCompile Include="Blam\Tags\Camera\AreaScreenEffect.cpp" />
+    <ClCompile Include="Blam\Tags\Globals\CacheFileGlobalTags.cpp" />
+    <ClCompile Include="Blam\Tags\Items\DefinitionEquipment.cpp" />
+    <ClCompile Include="Blam\Tags\Items\DefinitionWeapon.cpp" />
+    <ClCompile Include="Blam\Tags\Items\Item.cpp" />
+    <ClCompile Include="Blam\Tags\Objects\Biped.cpp" />
+    <ClCompile Include="Blam\Tags\Objects\Object.cpp" />
+    <ClCompile Include="Blam\Tags\Objects\Projectile.cpp" />
+    <ClCompile Include="Blam\Tags\Objects\Unit.cpp" />
+    <ClCompile Include="Blam\Tags\Objects\Vehicle.cpp" />
+    <ClCompile Include="Blam\Tags\Tag.cpp" />
+    <ClCompile Include="Blam\Tags\TagBlock.cpp" />
+    <ClCompile Include="Blam\Tags\TagData.cpp" />
+    <ClCompile Include="Blam\Tags\TagGroup.cpp" />
+    <ClCompile Include="Blam\Tags\TagInstance.cpp" />
+    <ClCompile Include="Blam\Tags\TagReference.cpp" />
+    <ClCompile Include="Blam\Text\StringID.cpp" />
+    <ClCompile Include="DatumHandle.cpp" />
+    <ClCompile Include="Definitions\EnumDefinition.cpp" />
+    <ClCompile Include="Definitions\FieldDefinition.cpp" />
+    <ClCompile Include="Definitions\StructDefinition.cpp" />
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="ElDorito.cpp" />
+    <ClCompile Include="Hooking.cpp" />
+    <ClCompile Include="Pointer.cpp" />
+    <ClCompile Include="Simulation.cpp" />
+    <ClCompile Include="Utils\Assert.cpp" />
+    <ClCompile Include="Utils\Cryptography.cpp" />
+    <ClCompile Include="Utils\String.cpp" />
+    <ClCompile Include="Utils\VersionInfo.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Blam\BitStream.hpp" />
+    <ClInclude Include="Blam\BlamData.hpp" />
+    <ClInclude Include="Blam\BlamEvents.hpp" />
+    <ClInclude Include="Blam\BlamGraphics.hpp" />
+    <ClInclude Include="Blam\BlamInput.hpp" />
+    <ClInclude Include="Blam\BlamMemory.hpp" />
+    <ClInclude Include="Blam\BlamNetwork.hpp" />
+    <ClInclude Include="Blam\BlamObjects.hpp" />
+    <ClInclude Include="Blam\BlamPlayers.hpp" />
+    <ClInclude Include="Blam\BlamTime.hpp" />
+    <ClInclude Include="Blam\BlamTypes.hpp" />
+    <ClInclude Include="Blam\Cache\StringIdCache.hpp" />
+    <ClInclude Include="Blam\Math\Angle.hpp" />
+    <ClInclude Include="Blam\Math\Bounds.hpp" />
+    <ClInclude Include="Blam\Math\ColorARGB.hpp" />
+    <ClInclude Include="Blam\Math\ColorRGB.hpp" />
+    <ClInclude Include="Blam\Math\MathUtil.hpp" />
+    <ClInclude Include="Blam\Math\Point2D.hpp" />
+    <ClInclude Include="Blam\Math\RealColorARGB.hpp" />
+    <ClInclude Include="Blam\Math\RealColorRGB.hpp" />
+    <ClInclude Include="Blam\Math\RealEulerAngles2D.hpp" />
+    <ClInclude Include="Blam\Math\RealEulerAngles3D.hpp" />
+    <ClInclude Include="Blam\Math\RealMatrix3x3.hpp" />
+    <ClInclude Include="Blam\Math\RealMatrix4x3.hpp" />
+    <ClInclude Include="Blam\Math\RealOrientation3D.hpp" />
+    <ClInclude Include="Blam\Math\RealPlane2D.hpp" />
+    <ClInclude Include="Blam\Math\RealPlane3D.hpp" />
+    <ClInclude Include="Blam\Math\RealPoint2D.hpp" />
+    <ClInclude Include="Blam\Math\RealPoint3D.hpp" />
+    <ClInclude Include="Blam\Math\RealQuaternion.hpp" />
+    <ClInclude Include="Blam\Math\RealRectangle2D.hpp" />
+    <ClInclude Include="Blam\Math\RealRectangle3D.hpp" />
+    <ClInclude Include="Blam\Math\RealVector2D.hpp" />
+    <ClInclude Include="Blam\Math\RealVector3D.hpp" />
+    <ClInclude Include="Blam\Math\Rectangle2D.hpp" />
+    <ClInclude Include="Blam\Padding.hpp" />
+    <ClInclude Include="Blam\Tags\Camera\AreaScreenEffect.hpp" />
+    <ClInclude Include="Blam\Tags\Camera\CameraFxSettings.hpp" />
+    <ClInclude Include="Blam\Tags\Enum.hpp" />
+    <ClInclude Include="Blam\Tags\Game\AssaultVariant.hpp" />
+    <ClInclude Include="Blam\Tags\Game\CTFVariant.hpp" />
+    <ClInclude Include="Blam\Tags\Game\GameEngineSettings.hpp" />
+    <ClInclude Include="Blam\Tags\Game\GameVariant.hpp" />
+    <ClInclude Include="Blam\Tags\Game\Globals.hpp" />
+    <ClInclude Include="Blam\Tags\Game\InfectionVariant.hpp" />
+    <ClInclude Include="Blam\Tags\Game\JuggernautVariant.hpp" />
+    <ClInclude Include="Blam\Tags\Game\KOTHVariant.hpp" />
+    <ClInclude Include="Blam\Tags\Game\MultiplayerGlobals.hpp" />
+    <ClInclude Include="Blam\Tags\Game\OddballVariant.hpp" />
+    <ClInclude Include="Blam\Tags\Game\SandboxVariant.hpp" />
+    <ClInclude Include="Blam\Tags\Game\SlayerVariant.hpp" />
+    <ClInclude Include="Blam\Tags\Game\TerritoriesVariant.hpp" />
+    <ClInclude Include="Blam\Tags\Game\TraitsProfile.hpp" />
+    <ClInclude Include="Blam\Tags\Game\VIPVariant.hpp" />
+    <ClInclude Include="Blam\Tags\Globals\CacheFileGlobalTags.hpp" />
+    <ClInclude Include="Blam\Tags\Globals\ForgeGlobalsDefinition.hpp" />
+    <ClInclude Include="Blam\Tags\Items\DefinitionEquipment.hpp" />
+    <ClInclude Include="Blam\Tags\Items\DefinitionWeapon.hpp" />
+    <ClInclude Include="Blam\Tags\Items\Item.hpp" />
+    <ClInclude Include="Blam\Tags\Models\Model.hpp" />
+    <ClInclude Include="Blam\Tags\Objects\Biped.hpp" />
+    <ClInclude Include="Blam\Tags\Objects\Damage.hpp" />
+    <ClInclude Include="Blam\Tags\Objects\Medal.hpp" />
+    <ClInclude Include="Blam\Tags\Objects\Object.hpp" />
+    <ClInclude Include="Blam\Tags\Objects\Projectile.hpp" />
+    <ClInclude Include="Blam\Tags\Objects\Unit.hpp" />
+    <ClInclude Include="Blam\Tags\Objects\Vehicle.hpp" />
+    <ClInclude Include="Blam\Tags\Scenario\Scenario.hpp" />
+    <ClInclude Include="Blam\Tags\Sounds\Noise.hpp" />
+    <ClInclude Include="Blam\Tags\Sounds\SoundClasses.hpp" />
+    <ClInclude Include="Blam\Tags\Tag.hpp" />
+    <ClInclude Include="Blam\Tags\TagBlock.hpp" />
+    <ClInclude Include="Blam\Tags\TagData.hpp" />
+    <ClInclude Include="Blam\Tags\TagGroup.hpp" />
+    <ClInclude Include="Blam\Tags\TagInstance.hpp" />
+    <ClInclude Include="Blam\Tags\TagReference.hpp" />
+    <ClInclude Include="Blam\Tags\Tags.hpp" />
+    <ClInclude Include="Blam\Tags\UI\ChudDefinition.hpp" />
+    <ClInclude Include="Blam\Tags\UI\ChudGlobalsDefinition.hpp" />
+    <ClInclude Include="Blam\Tags\UI\GfxTexturesList.hpp" />
+    <ClInclude Include="Blam\Tags\UI\GuiSkinWidgetDefinition.hpp" />
+    <ClInclude Include="Blam\Tags\UI\MultilingualUnicodeStringList.hpp" />
+    <ClInclude Include="Blam\Text\StringID.hpp" />
+    <ClInclude Include="DatumHandle.hpp" />
+    <ClInclude Include="Definitions\EnumDefinition.hpp" />
+    <ClInclude Include="Definitions\FieldDefinition.hpp" />
+    <ClInclude Include="Definitions\StructDefinition.hpp" />
+    <ClInclude Include="Hooking.hpp" />
+    <ClInclude Include="Pointer.hpp" />
+    <ClInclude Include="Precomp.hpp" />
+    <ClInclude Include="Simulation.hpp" />
+    <ClInclude Include="Utils\Assert.hpp" />
+    <ClInclude Include="Utils\Bits.hpp" />
+    <ClInclude Include="Utils\Cryptography.hpp" />
+    <ClInclude Include="Utils\Macros.hpp" />
+    <ClInclude Include="Utils\NameValueTable.hpp" />
+    <ClInclude Include="Utils\Singleton.hpp" />
+    <ClInclude Include="Utils\String.hpp" />
+    <ClInclude Include="Utils\UPnP.hpp" />
+    <ClInclude Include="Utils\Utils.hpp" />
+    <ClInclude Include="Utils\VersionInfo.hpp" />
+    <ClInclude Include="Utils\WebSocket.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
